@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEM Skills Details | Palle Siva Sankar</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-ovo);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .page-header i {
+            font-size: 4rem;
+            color: #FF5A5F;
+            /* Adobe Red-like color */
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 80px 0;
+            background: #fdfdfd;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .topic-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid #FF5A5F;
+            transition: transform 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic-card h3 {
+            font-family: var(--font-ovo);
+            font-size: 1.3rem;
+            color: var(--text-heading);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topic-card h3 span {
+            color: #FF5A5F;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .topic-card p {
+            color: var(--text-body);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .back-btn-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back-btn-container">
+        <a href="../index.html" class="btn-primary" style="padding: 10px 20px;"><i class="fas fa-arrow-left"></i> Back
+            to Portfolio</a>
+    </div>
+
+    <!-- Header -->
+    <div class="page-header">
+        <div class="container">
+            <i class="fas fa-layer-group"></i>
+            <h1>Adobe Experience Manager</h1>
+            <p>Content Management and Digital Asset Management.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3><span>01.</span> AEM Basics</h3>
+                    <p>Experience with AEM versions 6.3, 6.4, and 6.5, understanding core functionalities and
+                        differences.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>02.</span> UI Interfaces</h3>
+                    <p>Proficient in using both Classic UI and modern Touch UI for authoring and administration.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>03.</span> Core Modules</h3>
+                    <p>Managing Digital Asset Management (DAM), Multi Site Manager (MSM), Sites (Pages), and Components.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>04.</span> Fragments</h3>
+                    <p>Creating and managing Experience Fragments (XF) and Content Fragments (CF) for omnichannel
+                        delivery.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>05.</span> CMS Management</h3>
+                    <p>Content Management System operations including workflows, publishing, and versioning.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>06.</span> Roles & Workflow</h3>
+                    <p>AEM Web Publisher and Content Author roles, ensuring content quality and timely publication.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>07.</span> Content Editing</h3>
+                    <p>Rich text editing, layout management, and asset utilization within authoring dialogs.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>08.</span> Responsive Pages</h3>
+                    <p>Building and testing responsive web pages to ensure compatibility across devices.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>09.</span> Project Management Tools</h3>
+                    <p>Integration with Jira and Workfront for task tracking and agile content delivery flow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee;">
+        <p>&copy; 2025 Palle Siva Sankar. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

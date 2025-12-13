@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Details | Palle Siva Sankar</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-ovo);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .page-header i {
+            font-size: 4rem;
+            color: var(--gold-primary);
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 80px 0;
+            background: #fdfdfd;
+        }
+
+        /* Timeline / Cards for Education */
+        .edu-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            position: relative;
+        }
+
+        /* Vertical Line */
+        .edu-container::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(212, 175, 55, 0.3);
+            display: none;
+            /* Hidden on mobile, shown on desktop if desired, but let's stick to cards for now */
+        }
+
+        .edu-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--gold-primary);
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .edu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .edu-year {
+            background: var(--gold-primary);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .edu-card h2 {
+            font-family: var(--font-ovo);
+            font-size: 1.8rem;
+            color: var(--text-heading);
+            margin-bottom: 10px;
+        }
+
+        .edu-card h3 {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .edu-card h3 i {
+            color: var(--gold-primary);
+            margin-right: 8px;
+        }
+
+        .edu-card p {
+            color: var(--text-body);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .edu-highlight {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .edu-highlight strong {
+            color: var(--text-heading);
+        }
+
+        .back-btn-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back-btn-container">
+        <a href="../index.html" class="btn-primary" style="padding: 10px 20px;"><i class="fas fa-arrow-left"></i> Back
+            to
+            Portfolio</a>
+    </div>
+
+    <!-- Header -->
+    <div class="page-header">
+        <div class="container">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>Academic Journey</h1>
+            <p>My educational background, from early schooling to engineering graduation.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="edu-container">
+
+                <!-- B.Tech -->
+                <div class="edu-card">
+                    <span class="edu-year">2021 - 2025</span>
+                    <h2>Bachelor of Technology (ECE)</h2>
+                    <h3><i class="fas fa-university"></i> Anantha Lakshmi Institute of Technology & Sciences, Anantapur
+                    </h3>
+                    <p>Graduated with a focus on Electronics and Communication Engineering. Developed a strong
+                        foundation in problem-solving, analytical thinking, and technical principles.</p>
+                    <div class="edu-highlight">
+                        <strong>Key Achievement:</strong> Completed project on "Cattle Health Monitor" using IoT
+                        technologies.
+                    </div>
+                </div>
+
+                <!-- Intermediate -->
+                <div class="edu-card">
+                    <span class="edu-year">2019 - 2021</span>
+                    <h2>Intermediate (MPC)</h2>
+                    <h3><i class="fas fa-school"></i> Mangalakara Junior College</h3>
+                    <p>Completed Intermediate education specializing in Mathematics, Physics, and Chemistry (MPC). Built
+                        the core logic and mathematical skills essential for engineering.</p>
+                </div>
+
+                <!-- SSC -->
+                <div class="edu-card">
+                    <span class="edu-year">2018 - 2019</span>
+                    <h2>Secondary School Certificate (10th)</h2>
+                    <h3><i class="fas fa-book-reader"></i> Z.P. High School, Bukkapatnam</h3>
+                    <p>Completed schooling with a focus on excellence in foundational subjects including Mathematics and
+                        Science.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee;">
+        <p>&copy; 2025 Palle Siva Sankar. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

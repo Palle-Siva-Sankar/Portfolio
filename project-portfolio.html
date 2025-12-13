@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Interactive Portfolio | Palle Siva Sankar</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-ovo);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .page-header i {
+            font-size: 4rem;
+            color: #f5576c;
+            /* Matching the card gradient color */
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .project-meta {
+            color: #f5576c;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .content-section {
+            padding: 80px 0;
+            background: #fdfdfd;
+        }
+
+        .project-details-card {
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+            border-top: 4px solid #f5576c;
+        }
+
+        .project-details-card h2 {
+            font-family: var(--font-ovo);
+            color: var(--text-heading);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .project-details-card p {
+            color: var(--text-body);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tech-tag {
+            background: #fff0f3;
+            color: #d63384;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid #f8d7da;
+        }
+
+        .key-features {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .key-features h3 {
+            font-family: var(--font-ovo);
+            margin-bottom: 20px;
+            color: var(--text-heading);
+        }
+
+        .key-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key-features li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .key-features li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: #f5576c;
+        }
+
+        .back-btn-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back-btn-container">
+        <a href="../index.html#work" class="btn-primary" style="padding: 10px 20px;"><i class="fas fa-arrow-left"></i>
+            Back
+            to Portfolio</a>
+    </div>
+
+    <!-- Header -->
+    <div class="page-header">
+        <div class="container">
+            <i class="fas fa-cube"></i>
+            <h1>Interactive 3D Personal Portfolio</h1>
+            <div class="project-meta">2025 • Front End Development</div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="project-details-card">
+                <h2>About This Project</h2>
+                <p>You are looking at it! This portfolio website was built to demonstrate my skills in combining modern
+                    web aesthetics with interactive 3D elements. The goal was to create an immersive experience that
+                    goes beyond a standard static resume, engaging visitors through motion and interactivity.</p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3 (Modern)</span>
+                    <span class="tech-tag">Vanilla JavaScript</span>
+                    <span class="tech-tag">Three.js</span>
+                    <span class="tech-tag">Responsive Design</span>
+                </div>
+
+                <div class="key-features">
+                    <h3>Technical Deep Dive</h3>
+
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #f5576c; margin-bottom: 10px; font-family: var(--font-ovo);">1. Architecture &
+                            Structure</h4>
+                        <p style="color: #555; line-height: 1.6;">The foundation of this website is clean, semantic
+                            <strong>HTML5</strong>. I prioritized a logical document structure using tags like
+                            <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;article&gt;</code>.
+                            This not only helps with SEO but ensures the site is accessible.
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #f5576c; margin-bottom: 10px; font-family: var(--font-ovo);">2. Advanced
+                            Styling (CSS3)</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                    class="fas fa-check"
+                                    style="position: absolute; left: 0; color: #f5576c; font-size: 0.8rem; top: 5px;"></i>
+                                <strong>CSS Variables:</strong> Extensive use of <code>:root</code> variables for colors
+                                and fonts allows for easy theming and consistent design changes across the entire site.
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                    class="fas fa-check"
+                                    style="position: absolute; left: 0; color: #f5576c; font-size: 0.8rem; top: 5px;"></i>
+                                <strong>Glassmorphism:</strong> Used <code>backdrop-filter: blur()</code> and
+                                semi-transparent backgrounds to create modern, frosted-glass effects on cards and
+                                navbars.
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                    class="fas fa-check"
+                                    style="position: absolute; left: 0; color: #f5576c; font-size: 0.8rem; top: 5px;"></i>
+                                <strong>Layouts:</strong> A hybrid approach using <strong>Flexbox</strong> for
+                                one-dimensional alignments (like navbars) and <strong>CSS Grid</strong> for
+                                two-dimensional layouts (like the skills and project grids).
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #f5576c; margin-bottom: 10px; font-family: var(--font-ovo);">3. Three.js 3D
+                            Integration</h4>
+                        <p style="color: #555; line-height: 1.6;">The immersive 3D footer isn't a video but a real-time
+                            rendered scene using <strong>Three.js</strong> (WebGL).</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 10px;">
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                    class="fas fa-cube"
+                                    style="position: absolute; left: 0; color: #f5576c; font-size: 0.8rem; top: 5px;"></i>
+                                <strong>Scene Graph:</strong> Set up a scene, camera, and renderer. Loaded a GLTF model
+                                of an office desk to represent "work".
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                    class="fas fa-lightbulb"
+                                    style="position: absolute; left: 0; color: #f5576c; font-size: 0.8rem; top: 5px;"></i>
+                                <strong>Lighting:</strong> Implemented Ambient and Directional lighting to create
+                                realistic shadows and depth.
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                    class="fas fa-mouse-pointer"
+                                    style="position: absolute; left: 0; color: #f5576c; font-size: 0.8rem; top: 5px;"></i>
+                                <strong>Controls:</strong> Added <code>OrbitControls</code> to allow users to rotate and
+                                zoom into the scene, making the footer interactive.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #f5576c; margin-bottom: 10px; font-family: var(--font-ovo);">4. Performance
+                            Logic (JavaScript)</h4>
+                        <p style="color: #555; line-height: 1.6;">To ensure 60fps performance even with 3D elements:</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 10px;">
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                    class="fas fa-bolt"
+                                    style="position: absolute; left: 0; color: #f5576c; font-size: 0.8rem; top: 5px;"></i>
+                                <strong>Intersection Observer:</strong> The 3D scene only renders when it is visible in
+                                the viewport. When you scroll away, the rendering loop pauses, saving your device's
+                                battery and CPU (check <code>footer-3d.js</code>).
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;"><i
+                                    class="fas fa-clock"
+                                    style="position: absolute; left: 0; color: #f5576c; font-size: 0.8rem; top: 5px;"></i>
+                                <strong>Throttling:</strong> Scroll listeners and mouse-move effects (like the 3D card
+                                tilt) are throttled using <code>requestAnimationFrame</code> to prevent layout
+                                thrashing.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>This project serves as a live playground for my experiments with web technologies and a central hub
+                    for my professional identity.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee;">
+        <p>&copy; 2025 Palle Siva Sankar. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

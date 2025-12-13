@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 & CSS3 Skills | Palle Siva Sankar</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-ovo);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .page-header i {
+            font-size: 4rem;
+            color: #e34c26;
+            /* HTML5 Color for accent */
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 80px 0;
+            background: #fdfdfd;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .topic-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid #e34c26;
+            transition: transform 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic-card h3 {
+            font-family: var(--font-ovo);
+            font-size: 1.3rem;
+            color: var(--text-heading);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topic-card h3 span {
+            color: #e34c26;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .topic-card p {
+            color: var(--text-body);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .back-btn-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back-btn-container">
+        <a href="index.html" class="btn-primary" style="padding: 10px 20px;"><i class="fas fa-arrow-left"></i> Back to
+            Portfolio</a>
+    </div>
+
+    <!-- Header -->
+    <div class="page-header">
+        <div class="container">
+            <i class="fab fa-html5"></i>
+            <h1>HTML5 & CSS3</h1>
+            <p>The structure and style of modern websites.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3><span>01.</span> Semantic HTML</h3>
+                    <p>Using meaningful tags (<code>header</code>, <code>nav</code>, <code>article</code>) for better
+                        SEO and accessibility.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>02.</span> The Box Model</h3>
+                    <p>Understanding how margin, border, padding, and content interact to determine the size of
+                        elements.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>03.</span> Flexbox Layout</h3>
+                    <p>Creating one-dimensional layouts efficiently. Aligning items, distributing space, and handling
+                        responsiveness.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>04.</span> CSS Grid</h3>
+                    <p>Building complex two-dimensional layouts with rows and columns for robust page structures.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>05.</span> Responsive Design</h3>
+                    <p>Using Media Queries (<code>@media</code>) to ensure websites look perfect on desktops, tablets,
+                        and phones.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>06.</span> CSS Variables</h3>
+                    <p>Using custom properties (<code>--main-color</code>) for consistent theming and easier
+                        maintenance.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>07.</span> Animations</h3>
+                    <p>Bringing sites to life with <code>keyframes</code>, transitions, and transforms (translate,
+                        rotate, scale).</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>08.</span> Accessibility (a11y)</h3>
+                    <p>Designing for all users, including those using screen readers, by using ARIA attributes and
+                        proper contrast.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>09.</span> SEO Best Practices</h3>
+                    <p>Optimizing content with meta tags, proper heading hierarchy, and alt text to improve search
+                        engine ranking.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>10.</span> CSS Preprocessors (SaaS)</h3>
+                    <p>Using tools like SASS/SCSS for nested rules, mixins, and more efficient style management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee;">
+        <p>&copy; 2025 Palle Siva Sankar. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

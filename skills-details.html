@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Skills Details | Palle Siva Sankar</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for this details page */
+        .skills-header {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .skills-header h1 {
+            font-family: var(--font-ovo);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .skills-header p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .topic-section {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .topic-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .topic-header i {
+            font-size: 3rem;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+        }
+
+        .topic-header h2 {
+            font-family: var(--font-ovo);
+            font-size: 2.5rem;
+            color: var(--text-heading);
+            margin-bottom: 15px;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .topic-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid var(--gold-primary);
+            transition: transform 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic-card h3 {
+            font-family: var(--font-ovo);
+            font-size: 1.3rem;
+            color: var(--text-heading);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topic-card h3 span {
+            color: var(--gold-primary);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .topic-card p {
+            color: var(--text-body);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .back-btn-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        /* Dark Mode overrides if needed, using classes from style.css */
+    </style>
+</head>
+
+<body>
+
+    <div class="back-btn-container">
+        <a href="index.html" class="btn-primary" style="padding: 10px 20px;"><i class="fas fa-arrow-left"></i> Back to
+            Portfolio</a>
+    </div>
+
+    <!-- Header -->
+    <div class="skills-header">
+        <div class="container">
+            <h1>Core Technical Concepts</h1>
+            <p>A breakdown of the fundamental topics I've mastered in my journey as a developer.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript Section -->
+    <section id="javascript" class="topic-section">
+        <div class="container">
+            <div class="topic-header">
+                <i class="fab fa-js"></i>
+                <h2>JavaScript Fundamentals</h2>
+                <p>The logic that powers the dynamic web.</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3><span>01.</span> Variables & Data Types</h3>
+                    <p>Understanding <code>let</code>, <code>const</code>, and <code>var</code>, along with primitive
+                        types (String, Number, Boolean) and complex types (Objects, Arrays).</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>02.</span> Functions & Arrow Functions</h3>
+                    <p>Writing reusable code blocks. Mastery of ES6 Arrow functions <code>() => {}</code> for cleaner
+                        syntax and lexical <code>this</code> binding.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>03.</span> DOM Manipulation</h3>
+                    <p>Interacting with the HTML structure. Selecting elements (<code>querySelector</code>), changing
+                        styles, and dynamic content updates.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>04.</span> Event Listeners</h3>
+                    <p>Handling user interactions like clicks, scrolls, and keypresses using
+                        <code>addEventListener</code> to make pages responsive.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>05.</span> Async Javascript</h3>
+                    <p>Managing operations that take time (like fetching data) using <code>Promises</code> and the
+                        modern <code>async/await</code> syntax.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>06.</span> ES6+ Features</h3>
+                    <p>Utilizing modern features like Destructuring, Template Literals, Spread/Rest operators to write
+                        efficient code.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>07.</span> Array Methods</h3>
+                    <p>data manipulation using high-order functions like <code>.map()</code>, <code>.filter()</code>,
+                        and <code>.reduce()</code>.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>08.</span> Error Handling</h3>
+                    <p>Writing robust code using <code>try...catch</code> blocks to gracefully handle potential runtime
+                        errors.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>09.</span> LocalStorage & SessionStorage</h3>
+                    <p>Persisting user data in the browser so it survives page reloads and sessions.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>10.</span> Closures & Scope</h3>
+                    <p>Understanding how functions retain access to variables from their parent scope even after the
+                        parent function has closed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML & CSS Section -->
+    <section id="htmlcss" class="topic-section" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="topic-header">
+                <i class="fab fa-html5"></i>
+                <h2>HTML5 & CSS3</h2>
+                <p>The structure and style of modern websites.</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3><span>01.</span> Semantic HTML</h3>
+                    <p>Using meaningful tags (<code>header</code>, <code>nav</code>, <code>article</code>) for better
+                        SEO and accessibility.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>02.</span> The Box Model</h3>
+                    <p>Understanding how margin, border, padding, and content interact to determine the size of
+                        elements.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>03.</span> Flexbox Layout</h3>
+                    <p>Creating one-dimensional layouts efficiently. Aligning items, distributing space, and handling
+                        responsiveness.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>04.</span> CSS Grid</h3>
+                    <p>Building complex two-dimensional layouts with rows and columns for robust page structures.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>05.</span> Responsive Design</h3>
+                    <p>Using Media Queries (<code>@media</code>) to ensure websites look perfect on desktops, tablets,
+                        and phones.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>06.</span> CSS Variables</h3>
+                    <p>Using custom properties (<code>--main-color</code>) for consistent theming and easier
+                        maintenance.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>07.</span> Animations</h3>
+                    <p>Bringing sites to life with <code>keyframes</code>, transitions, and transforms (translate,
+                        rotate, scale).</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>08.</span> Accessibility (a11y)</h3>
+                    <p>Designing for all users, including those using screen readers, by using ARIA attributes and
+                        proper contrast.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>09.</span> SEO Best Practices</h3>
+                    <p>Optimizing content with meta tags, proper heading hierarchy, and alt text to improve search
+                        engine ranking.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>10.</span> CSS Preprocessors (SaaS)</h3>
+                    <p>Using tools like SASS/SCSS for nested rules, mixins, and more efficient style management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MySQL Section -->
+    <section id="mysql" class="topic-section">
+        <div class="container">
+            <div class="topic-header">
+                <i class="fas fa-database"></i>
+                <h2>MySQL & Database</h2>
+                <p>Storing, retrieving, and managing data.</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3><span>01.</span> Relational Databases</h3>
+                    <p>Understanding tables, rows, and columns, and how structured data relates to each other.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>02.</span> CRUD Operations</h3>
+                    <p>The core functions: Create (INSERT), Read (SELECT), Update (UPDATE), and Delete (DELETE) data.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>03.</span> Keys & Indexes</h3>
+                    <p>Using Primary Keys to uniquely identify records and Foreign Keys to link tables together.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>04.</span> Joins</h3>
+                    <p>Combining rows from two or more tables (INNER JOIN, LEFT JOIN) based on a related column.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>05.</span> Filtering & Sorting</h3>
+                    <p>Refining queries using <code>WHERE</code> clauses, <code>LIKE</code> patterns, and
+                        <code>ORDER BY</code>.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>06.</span> Aggregation</h3>
+                    <p>Performing calculations on data sets using functions like <code>COUNT()</code>,
+                        <code>SUM()</code>, and <code>AVG()</code>.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>07.</span> Normalization</h3>
+                    <p>Organizing data to reduce redundancy and improve data integrity (1NF, 2NF, 3NF).</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>08.</span> ACID Properties</h3>
+                    <p>Ensuring reliable transactions: Atomicity, Consistency, Isolation, and Durability.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>09.</span> Stored Procedures</h3>
+                    <p>Saving complex SQL queries on the database server to be reused and executed efficiently.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>10.</span> Transactions</h3>
+                    <p>Grouping multiple operations into a single unit of work that either all succeed or all fail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Stack Section -->
+    <section id="fullstack" class="topic-section" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="topic-header">
+                <i class="fas fa-layer-group"></i>
+                <h2>Full Stack Development</h2>
+                <p>The big picture: Connecting Frontend to Backend.</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3><span>01.</span> Client-Server Architecture</h3>
+                    <p>How the browser (Client) requests resources and the Server processes and responds to them.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>02.</span> REST APIs</h3>
+                    <p>Building and consuming Application Programming Interfaces to exchange JSON data between systems.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>03.</span> Frontend Frameworks</h3>
+                    <p>Using libraries like React to build single-page applications with reusable components.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>04.</span> Backend Logic</h3>
+                    <p>Writing server-side code (Node.js/Java) to handle business logic, authentication, and routing.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>05.</span> Database Integration</h3>
+                    <p>Connecting the backend to the database to persist user data securely.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>06.</span> Version Control (Git)</h3>
+                    <p>Tracking changes, branching workflows, and collaborating with teams using Git and GitHub.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>07.</span> Deployment</h3>
+                    <p>Hosting applications on the web using platforms like Vercel, Netlify, or AWS.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>08.</span> Authentication & JWT</h3>
+                    <p>Securing applications using JSON Web Tokens to handle user login and session management.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>09.</span> Middleware</h3>
+                    <p>Functions that execute during the request-response cycle to handle tasks like logging or
+                        authorization.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>10.</span> Microservices</h3>
+                    <p>Breaking down large applications into smaller, independent services that communicate with each
+                        other.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee;">
+        <p>&copy; 2025 Palle Siva Sankar. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
