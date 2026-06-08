@@ -210,7 +210,7 @@ nav {
     width: 100%;
     max-width: 300px;
     height: 100vh;
-    background: #ffffff;
+    background: var(--nav-bg);
     border-left: 2px solid var(--gold-primary);
     padding: 30px;
     transition: right 0.3s;
@@ -232,6 +232,13 @@ nav {
 
 .mobile-links {
     list-style: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .menu-icon { display: block; }
+    .mobile-links a { color: var(--nav-text); }
+    .mobile-menu { background: var(--nav-bg); }
 }
 
 .mobile-links li {
