@@ -16,8 +16,6 @@ if (themeToggle) {
 }
 
 // ===== MOBILE MENU TOGGLE =====
-
-// ===== MOBILE MENU TOGGLE =====
 function toggleMenu() {
     const mobileMenu = document.getElementById('mobileMenu');
     mobileMenu.classList.toggle('active');
@@ -27,7 +25,9 @@ function toggleMenu() {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        const target = document.querySelector(targetId);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -185,7 +185,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.service-card, .work-card, .about-card').forEach(el => {
+document.querySelectorAll('.service-card, .work-card, .about-card, .language-card, .hobby-card, .section-title').forEach(el => {
     el.classList.add('reveal-on-scroll');
     observer.observe(el);
 });
@@ -197,14 +197,35 @@ window.addEventListener('scroll', () => {
         window.requestAnimationFrame(() => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
-                nav.style.background = 'rgba(22, 21, 19, 0.95)';
+               nav.classList.add('scrolled');
             } else {
-                nav.style.background = 'rgba(22, 21, 19, 0.9)';
+               nav.classList.remove('scrolled');
             }
             navTicking = false;
         });
         navTicking = true;
     }
+});
+
+// ===== SCROLL TO TOP BUTTON =====
+const scrollTopBtn = document.createElement('button');
+scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+scrollTopBtn.className = 'scroll-top';
+document.body.appendChild(scrollTopBtn);
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
 
 console.log('Portfolio loaded successfully! 🚀');
