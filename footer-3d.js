@@ -19,17 +19,15 @@ function initOfficeScene() {
     camera.lookAt(0, 1.0, 0);
 
     // RENDERER
-    // RENDERER
     const renderer = new THREE.WebGLRenderer({
-        antialias: true,
+        antialias: false,
         alpha: true,
         powerPreference: 'high-performance'
     });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setPixelRatio(1);
     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    renderer.physicallyCorrectLights = true;
+    renderer.shadowMap.type = THREE.BasicShadowMap;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.0;
     renderer.outputEncoding = THREE.sRGBEncoding;
@@ -190,8 +188,8 @@ function initOfficeScene() {
     const sunLight = new THREE.DirectionalLight(0xffffee, 1.5);
     sunLight.position.set(-5, 10, 5);
     sunLight.castShadow = true;
-    sunLight.shadow.mapSize.width = 2048;
-    sunLight.shadow.mapSize.height = 2048;
+    sunLight.shadow.mapSize.width = 512;
+    sunLight.shadow.mapSize.height = 512;
     scene.add(sunLight);
 
     // CONTROLS
@@ -216,14 +214,19 @@ function initOfficeScene() {
 
     observer.observe(container);
 
-    function animate() {
+    // THROTTLED ANIMATION LOOP (30fps max)
+    let lastFrame = 0;
+    const frameInterval = 1000 / 30;
+
+    function animate(timestamp) {
         requestAnimationFrame(animate);
-        if (isRendering) {
-            if (controls) controls.update();
-            renderer.render(scene, camera);
-        }
+        if (!isRendering) return;
+        if (timestamp - lastFrame < frameInterval) return;
+        lastFrame = timestamp;
+        if (controls) controls.update();
+        renderer.render(scene, camera);
     }
-    animate();
+    animate(0);
 
     window.addEventListener('resize', () => {
         if (container.clientWidth && container.clientHeight) {

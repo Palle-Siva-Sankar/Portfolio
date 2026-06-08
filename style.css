@@ -35,9 +35,9 @@
   --font-ovo: "Ovo", serif;
 
   /* Glass effect */
-  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-bg: rgba(255, 255, 255, 0.85);
   --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-blur: 20px;
+  --glass-blur: 10px;
 }
 
 [data-theme="dark"] {
@@ -60,9 +60,9 @@
   --overlay-color: rgba(0, 0, 0, 0.9);
   --glow-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 
-  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-bg: rgba(20, 20, 20, 0.85);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-blur: 20px;
+  --glass-blur: 10px;
 }
 
 body {
@@ -75,7 +75,7 @@ body {
   transition: background-color 0.5s ease;
 }
 
-/* High Performance Fixed Background */
+/* High Performance Background */
 body::before {
   content: "";
   position: fixed;
@@ -89,18 +89,19 @@ body::before {
   background-size: cover;
   background-position: center;
   z-index: -2;
-  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* ===== ANIMATED GRADIENT ORBS ===== */
 .gradient-orb {
   position: fixed;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.4;
+  filter: blur(40px);
+  opacity: 0.3;
   z-index: -1;
   pointer-events: none;
-  will-change: transform;
+  transform: translateZ(0);
+  contain: layout style paint;
 }
 
 .orb-1 {
@@ -626,7 +627,7 @@ header {
     url("hero-bg.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   color: #fff;
   position: relative;
   z-index: 1;
@@ -847,15 +848,14 @@ section {
 
 .about-card {
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 40px;
   text-align: center;
   color: var(--card-text);
   box-shadow: var(--card-shadow);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  contain: layout style;
 }
 
 .about-card:hover {
@@ -918,9 +918,8 @@ section {
   justify-content: center;
   font-size: 1.8rem;
   color: var(--text-body);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   text-decoration: none;
-  backdrop-filter: blur(10px);
 }
 
 .skill-item:hover {
@@ -940,15 +939,14 @@ section {
 
 .service-card {
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   padding: 40px 30px;
   border-radius: 12px;
   position: relative;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   border: 1px solid var(--card-border);
   box-shadow: var(--card-shadow);
   text-align: center;
+  contain: layout style;
 }
 
 .service-card:hover {
@@ -1073,11 +1071,10 @@ section {
   left: 0;
   width: 100%;
   padding: 30px;
-  background: rgba(26, 26, 26, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(26, 26, 26, 0.97);
   border-top: 1px solid var(--gold-primary);
   transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease;
 }
 
 .work-card:hover .work-info {
@@ -1171,13 +1168,13 @@ section {
 .language-card,
 .hobby-card {
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
   border: 1px solid var(--card-border);
   padding: 30px;
   border-radius: 12px;
   text-align: center;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   box-shadow: var(--card-shadow);
+  contain: layout style;
 }
 
 .language-card:hover,
@@ -1381,13 +1378,11 @@ section {
 
 .contact-right {
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--card-border);
   padding: 50px;
   border-radius: 12px;
   box-shadow: var(--card-shadow);
-  transition: all 0.5s ease;
+  transition: border-color 0.3s ease;
 }
 
 .contact-right:hover {

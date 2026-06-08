@@ -37,94 +37,64 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== ACTIVE NAV LINK ON SCROLL =====
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section, header');
-    const navLinks = document.querySelectorAll('.nav-link');
 
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
+// ===== ENHANCED 3D CARD TILT EFFECT (DESKTOP ONLY) =====
+const isMobile = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+if (!isMobile) {
+    const cards = document.querySelectorAll('.card-3d');
+    cards.forEach(card => {
+        let ticking = false;
+        card.addEventListener('mousemove', (e) => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -8;
+                    const rotateY = ((x - centerX) / centerX) * 8;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
     });
+}
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
+// ===== 3D BUTTON TILT EFFECT (DESKTOP ONLY) =====
+if (!isMobile) {
+    const buttons = document.querySelectorAll('.btn-3d');
+    buttons.forEach(btn => {
+        let ticking = false;
+        btn.addEventListener('mousemove', (e) => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const rect = btn.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -5;
+                    const rotateY = ((x - centerX) / centerX) * 5;
+                    btn.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = '';
+        });
     });
-});
-
-// ===== ENHANCED 3D CARD TILT EFFECT (THROTTLED) =====
-const cards = document.querySelectorAll('.card-3d');
-
-cards.forEach(card => {
-    let ticking = false;
-
-    card.addEventListener('mousemove', (e) => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = ((y - centerY) / centerY) * -10;
-                const rotateY = ((x - centerX) / centerX) * 10;
-
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-                
-                // Update CSS variables for lighting effect
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-                
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-    });
-});
-
-// ===== 3D BUTTON TILT EFFECT (THROTTLED) =====
-const buttons = document.querySelectorAll('.btn-3d');
-
-buttons.forEach(btn => {
-    let ticking = false;
-
-    btn.addEventListener('mousemove', (e) => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                const rect = btn.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = ((y - centerY) / centerY) * -5;
-                const rotateY = ((x - centerX) / centerX) * 5;
-
-                btn.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
-
-    btn.addEventListener('mouseleave', () => {
-        btn.style.transform = 'perspective(500px) rotateX(0) rotateY(0) translateY(0)';
-    });
-});
+}
 
 // ===== FORM SUBMISSION =====
 const contactForm = document.querySelector('.contact-right');
@@ -171,40 +141,18 @@ if (showMoreBtn) {
 
 
 // ===== SCROLL REVEAL ANIMATION =====
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px' // Slightly adjusted margin for better trigger
-};
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible'); // Use class for animation
-            observer.unobserve(entry.target); // Stop observing once visible to save performance
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 document.querySelectorAll('.service-card, .work-card, .about-card, .language-card, .hobby-card, .section-title').forEach(el => {
     el.classList.add('reveal-on-scroll');
     observer.observe(el);
-});
-
-// ===== NAVBAR BACKGROUND ON SCROLL (THROTTLED) =====
-let navTicking = false;
-window.addEventListener('scroll', () => {
-    if (!navTicking) {
-        window.requestAnimationFrame(() => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-               nav.classList.add('scrolled');
-            } else {
-               nav.classList.remove('scrolled');
-            }
-            navTicking = false;
-        });
-        navTicking = true;
-    }
 });
 
 // ===== SCROLL TO TOP BUTTON =====
@@ -213,19 +161,52 @@ scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 scrollTopBtn.className = 'scroll-top';
 document.body.appendChild(scrollTopBtn);
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-        scrollTopBtn.classList.add('visible');
-    } else {
-        scrollTopBtn.classList.remove('visible');
-    }
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+// ===== UNIFIED SCROLL HANDLER (single listener) =====
+let scrollTicking = false;
+window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
+
+            // Active nav link
+            const sections = document.querySelectorAll('section, header');
+            const navLinks = document.querySelectorAll('.nav-link');
+            let current = '';
+            sections.forEach(section => {
+                if (scrollY >= (section.offsetTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Navbar shrink
+            const nav = document.querySelector('nav');
+            if (scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            // Scroll to top button
+            if (scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+
+            scrollTicking = false;
+        });
+        scrollTicking = true;
+    }
+}, { passive: true });
 
 console.log('Portfolio loaded successfully! 🚀');
