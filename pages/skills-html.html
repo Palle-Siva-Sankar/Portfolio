@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Skills Details | Palle Siva Sankar</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-ovo);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .page-header i {
+            font-size: 4rem;
+            color: #e34c26;
+            /* HTML5 Color */
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 80px 0;
+            background: #fdfdfd;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .topic-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid #e34c26;
+            transition: transform 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic-card h3 {
+            font-family: var(--font-ovo);
+            font-size: 1.3rem;
+            color: var(--text-heading);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topic-card h3 span {
+            color: #e34c26;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .topic-card p {
+            color: var(--text-body);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .back-btn-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back-btn-container">
+        <a href="../index.html" class="btn-primary" style="padding: 10px 20px;"><i class="fas fa-arrow-left"></i> Back
+            to
+            Portfolio</a>
+    </div>
+
+    <!-- Header -->
+    <div class="page-header">
+        <div class="container">
+            <i class="fab fa-html5"></i>
+            <h1>HTML5</h1>
+            <p>The semantic structure of the modern web.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3><span>01.</span> Semantic Elements</h3>
+                    <p>Using correct tags like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and
+                        <code>&lt;nav&gt;</code> for better structure and SEO.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>02.</span> Forms & Validation</h3>
+                    <p>Building robust forms with input types, attributes like <code>required</code>, and pattern
+                        matching.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>03.</span> Multimedia</h3>
+                    <p>Embedding audio, video, and images responsibly using modern formats and the
+                        <code>&lt;picture&gt;</code> tag.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>04.</span> Accessibility (ARIA)</h3>
+                    <p>Ensuring content is readable by screen readers using roles and aria-attributes.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>05.</span> SEO Best Practices</h3>
+                    <p>Optimizing meta tags, headings hierarchies, and document structure for search engines.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>06.</span> DOM Structure</h3>
+                    <p>Understanding the Document Object Model tree and parent/child relationships.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>07.</span> HTML5 APIs</h3>
+                    <p>Utilizing Geolocation, Drag and Drop, and LocalStorage APIs built into the browser.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>08.</span> Tables & Data</h3>
+                    <p>Structuring complex data using <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, and
+                        <code>&lt;tbody&gt;</code> for clarity.
+                    </p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>09.</span> Responsive Meta Tags</h3>
+                    <p>Configuring the viewport meta tag properly to ensure correct scaling on mobile devices.</p>
+                </div>
+                <div class="topic-card">
+                    <h3><span>10.</span> Web Components</h3>
+                    <p>Understanding the basics of Custom Elements and Shadow DOM for creating reusable widgets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee;">
+        <p>&copy; 2025 Palle Siva Sankar. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

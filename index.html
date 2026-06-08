@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palle Siva Sankar | Front End Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">SIVA<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="pages/education-details.html" class="nav-link">Education</a></li>
+                <li><a href="#services" class="nav-link">Skills</a></li>
+                <li><a href="#work" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-toggle" id="themeToggle" title="Toggle Light/Dark Mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </div>
+            <a href="#contact" class="btn-primary nav-btn">Connect With Me <i class="fas fa-arrow-right"></i></a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-icon" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="pages/education-details.html" onclick="toggleMenu()">Education</a></li>
+            <li><a href="#services" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#work" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Header / Hero -->
+    <header id="home">
+        <div class="container header-content">
+            <div class="profile-img-container">
+                <img src="image 10.jpg" alt="Palle Siva Sankar" class="profile-img">
+            </div>
+            <h3>Hi, I'm <span class="txt-highlight">Palle Siva Sankar</span></h3>
+            <h1>Front End Developer | BTech (ECE) Graduate</h1>
+            <p>Enthusiastic and detail-oriented Front End Developer with hands-on experience in building web
+                applications using JavaScript, MySQL, HTML, CSS, React. Passionate about coding, problem-solving, and
+                continuous learning.</p>
+
+            <div class="header-btns">
+                <a href="#work" class="btn-primary btn-3d">View My Projects</a>
+                <a href="./resume.....pdf" download="Palle_Siva_Sankar_Resume.pdf"
+                    class="btn-secondary btn-3d">Download CV <i class="fas fa-download"></i></a>
+                <!-- <a href="mailto:Sivasankarpalle3@gmail.com" class="btn-secondary btn-3d">Email Me</a> -->
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <span>Academic Journey<span>
+                        <h2>Education</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-left">
+                    <a href="pages/education-details.html" style="text-decoration: none;">
+                        <div class="about-card card-3d">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h2>Academic Journey</h2>
+                            <p style="color:#f2e6e6c5">My educational background, from early schooling to engineering
+                                graduation.</p>
+                            <span
+                                style="display: inline-block; margin-top: 15px; color: var(--gold-primary); font-weight: 600; font-size: 0.9rem;">Click
+                                for Full History <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="about-right">
+                    <p class="about-desc">
+                        I completed my Bachelor of Technology (ECE), building a strong foundation in electronics and
+                        engineering principles. My educational background has equipped me with analytical thinking,
+                        problem-solving skills, and a systematic approach to learning new technologies. Currently
+                        pursuing Full Stack Web Development at Tap Academy (6-months program).
+                    </p>
+
+                    <div class="info-list">
+                        <ul>
+                            <li><strong>Education:</strong> B.Tech (ECE)</li>
+                            <li><strong>Current:</strong> Full Stack @ Tap Academy</li>
+                            <li><strong>Location:</strong> Andhra Pradesh, India</li>
+                            <li><strong>Email:</strong> Sivasankarpalle3@gmail.com</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-wrapper">
+                        <a href="pages/skills-html.html" class="skill-item" title="HTML5 Skills"><i
+                                class="fab fa-html5"></i></a>
+                        <a href="pages/skills-css.html" class="skill-item" title="CSS3 Skills"><i
+                                class="fab fa-css3-alt"></i></a>
+                        <a href="pages/skills-javascript.html" class="skill-item" title="JavaScript Skills"><i
+                                class="fab fa-js"></i></a>
+                        <a href="pages/skills-react.html" class="skill-item" title="React Skills"><i
+                                class="fab fa-react"></i></a>
+                        <a href="pages/skills-mysql.html" class="skill-item" title="MySQL Skills"><i
+                                class="fas fa-database"></i></a>
+                        <a href="pages/skills-aem.html" class="skill-item" title="AEM Skills"><i
+                                class="fas fa-layer-group"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="dark-bg">
+        <div class="container">
+            <div class="section-title">
+                <span>Core Competencies</span>
+                <h2>Technical Skills</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card card-3d">
+                    <span class="num">01</span>
+                    <i class="fab fa-js icon"></i>
+                    <h3>JavaScript</h3>
+                    <p>Building interactive and dynamic web experiences with modern JavaScript frameworks and libraries.
+                    </p>
+                    <a href="pages/skills-javascript.html" class="read-more">Read More <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Service 2: HTML -->
+                <div class="service-card card-3d">
+                    <span class="num">02</span>
+                    <i class="fab fa-html5 icon"></i>
+                    <h3>HTML5</h3>
+                    <p>Crafting semantic and accessible page structures.</p>
+                    <a href="pages/skills-html.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 2.5: CSS -->
+                <div class="service-card card-3d">
+                    <span class="num">03</span>
+                    <i class="fab fa-css3-alt icon"></i>
+                    <h3>CSS3</h3>
+                    <p>Designing modern, responsive, and animated layouts.</p>
+                    <a href="pages/skills-css.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 4 (New): React -->
+                <div class="service-card card-3d">
+                    <span class="num">04</span>
+                    <i class="fab fa-react icon"></i>
+                    <h3>React.js</h3>
+                    <p>Building dynamic SPAs with component-based architecture.</p>
+                    <a href="pages/skills-react.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card card-3d">
+                    <span class="num">05</span>
+                    <i class="fas fa-database icon"></i>
+                    <h3>MySQL</h3>
+                    <p>Database management and integration for robust backend solutions.</p>
+                    <a href="pages/skills-mysql.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card card-3d">
+                    <span class="num">06</span>
+                    <i class="fas fa-layer-group icon"></i>
+                    <h3>Java Full Stack Web Development</h3>
+                    <p>Currently Learning</p>
+                    <a href="pages/skills-fullstack.html" class="read-more">Read More <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Service 7: AEM -->
+                <div class="service-card card-3d">
+                    <span class="num">07</span>
+                    <i class="fas fa-layer-group icon"></i>
+                    <h3>Adobe AEM</h3>
+                    <p>Content Management, DAM, and Authoring with AEM 6.3/6.4/6.5.</p>
+                    <a href="pages/skills-aem.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work">
+        <div class="container">
+            <div class="section-title">
+                <span>Academic Portfolio</span>
+                <h2>My Projects</h2>
+            </div>
+
+            <div class="work-grid">
+                <!-- Project 0: TechStore (Newest) -->
+                <div class="work-card card-3d"
+                    style="--bg-img: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);">
+                    <div class="work-img">
+                        <i class="fas fa-shopping-cart work-icon"></i>
+                    </div>
+                    <div class="work-info">
+                        <h4>TechStore - Premium E-commerce</h4>
+                        <p>React • Node.js • Live Project</p>
+                        <a href="https://tech-store-project-one.vercel.app/" target="_blank" class="work-link"
+                            title="View Live Project"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="work-card card-3d" style="--bg-img: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                    <div class="work-img">
+                        <i class="fas fa-satellite-dish work-icon"></i>
+                    </div>
+                    <div class="work-info">
+                        <h4>Tracking and Monitoring Cattle’s Health Using Wireless Sensor Networks</h4>
+                        <p>IOT • Embedded</p>
+                        <a href="pages/project-cattle-health.html" class="work-link" title="View Project Details"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="work-card card-3d" style="--bg-img: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="work-img">
+                        <i class="fas fa-cube work-icon"></i>
+                    </div>
+                    <div class="work-info">
+                        <h4>Interactive 3D Portfolio</h4>
+                        <p>Three.js • CSS3 • HTML5</p>
+                        <a href="pages/project-portfolio.html" class="work-link" title="How this was built"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 4: AEM (Hidden) -->
+                <div class="work-card card-3d extra-projects hidden"
+                    style="--bg-img: linear-gradient(135deg, #ed1c24 0%, #7d1115 100%);">
+                    <div class="work-img">
+                        <i class="fas fa-layer-group work-icon"></i>
+                    </div>
+                    <div class="work-info">
+                        <h4>AEM Content Management</h4>
+                        <p>AEM 6.5 • Java • OSGi</p>
+                        <a href="pages/skills-aem.html" class="work-link" title="View Details"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="show-more-container">
+                <a href="javascript:void(0)" class="btn-secondary show-more-btn btn-3d" id="showMoreBtn">Show more <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages & Hobbies Section -->
+    <section id="hobbies">
+        <div class="container">
+            <!-- Languages Subsection -->
+            <div class="section-title">
+                <span>Communication</span>
+                <h2>Languages</h2>
+            </div>
+
+            <div class="languages-grid" style="margin-bottom: 80px;">
+                <div class="language-card card-3d">
+                    <div class="lang-icon"><i class="fas fa-language"></i></div>
+                    <h3>English</h3>
+                    <span class="lang-level">Intermediate</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="language-card card-3d">
+                    <div class="lang-icon"><i class="fas fa-om"></i></div>
+                    <h3>Hindi</h3>
+                    <span class="lang-level">Intermediate</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="language-card card-3d">
+                    <div class="lang-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3>Telugu</h3>
+                    <span class="lang-level">Proficient</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobbies Subsection -->
+            <div class="section-title">
+                <span>Personal Interests</span>
+                <h2>Hobbies</h2>
+            </div>
+
+            <div class="hobbies-content">
+                <div class="hobbies-quote-card card-3d">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Continuous learning and diverse interests fuel creativity and problem-solving."</p>
+                </div>
+
+                <div class="hobbies-grid">
+                    <div class="hobby-card card-3d">
+                        <div class="hobby-icon"><i class="fas fa-dumbbell"></i></div>
+                        <h3>Gym</h3>
+                    </div>
+                    <div class="hobby-card card-3d">
+                        <div class="hobby-icon"><i class="fas fa-music"></i></div>
+                        <h3>Music</h3>
+                    </div>
+                    <div class="hobby-card card-3d">
+                        <div class="hobby-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>Reading</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="dark-bg">
+        <div class="container">
+            <div class="section-title">
+                <span>Open to Opportunities</span>
+                <h2>Let's Connect</h2>
+            </div>
+
+            <div class="contact-row">
+                <div class="contact-left">
+                    <h3>Let's talk</h3>
+                    <p>Open to software developer roles, internships, and collaboration opportunities. I hereby declare
+                        that the information provided above is true and correct to the best of my knowledge.</p>
+
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Sivasankarpalle3@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 7207944231</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bukkapatnam, Andhra Pradesh</span>
+                        </div>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/siva-sankar-palle-38ab39283/" target="_blank"
+                            class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Palle-Siva-Sankar" target="_blank" class="social-btn"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/palle_siva_sankar" target="_blank" class="social-btn"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://app.netlify.com/user/settings#profile" target="_blank" class="social-btn"><i
+                                class="fas fa-bolt"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-right form-3d">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Enter your name" name="name" required>
+
+                    <label>Your Email</label>
+                    <input type="email" placeholder="Enter your email" name="email" required>
+
+                    <label>Write your message here</label>
+                    <textarea name="message" rows="6" placeholder="Enter your message" required></textarea>
+
+                    <button type="submit" class="btn-primary form-btn btn-3d">Submit now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with 3D Background Overlay -->
+    <footer
+        style="position: relative; overflow: hidden; min-height: 500px; display: flex; align-items: center; justify-content: center;">
+
+        <!-- 3D Scene Layer (Background) -->
+        <div id="footer-3d-scene" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+        </div>
+
+        <!-- Glass Overlay (Blur) -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(2px);">
+        </div>
+
+        <!-- Content Layer (Foreground) -->
+        <div class="container" style="position: relative; z-index: 3; text-align: center; pointer-events: none;">
+
+            <div class="footer-logo" style="margin-bottom: 30px; text-shadow: 0 4px 10px rgba(255,255,255,0.8);">
+                <h2 style="color: #333; font-weight: 800; font-size: 2.5rem; letter-spacing: 2px;">SIVA<span class="dot"
+                        style="color: var(--gold-primary);">.</span></h2>
+                <p style="color: #444; font-weight: 500;">Front End Developer | BTech (ECE) Graduate</p>
+            </div>
+
+            <!-- Interactive elements must have pointer-events: auto -->
+            <div class="footer-input"
+                style="width: 100%; max-width: 550px; margin: 0 auto 40px; pointer-events: auto; background: rgba(255,255,255,0.9); padding: 8px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                <div class="email-box"
+                    style="background: transparent; flex: 1; padding-left: 20px; display: flex; align-items: center;">
+                    <i class="fas fa-envelope" style="color: #d4af37; font-size: 1.2rem; margin-right: 15px;"></i>
+                    <span style="color: #333; font-weight: 600; font-size: 1rem;">Sivasankarpalle3@gmail.com</span>
+                </div>
+                <a href="mailto:Sivasankarpalle3@gmail.com" class="footer-btn"
+                    style="text-decoration: none; border-radius: 40px; padding: 12px 25px;">Send Mail</a>
+            </div>
+
+            <div class="footer-bottom-links" style="pointer-events: auto;">
+                <p style="color: #555;">&copy; 2025 Palle Siva Sankar. All rights reserved.</p>
+                <div class="footer-terms" style="margin-top: 20px;">
+                    <a href="pages/terms.html" style="color: #333;">Terms of Service</a>
+                    <a href="pages/privacy.html" style="color: #333;">Privacy Policy</a>
+                    <a href="#contact" style="color: #333;">Connect with me</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <span
+                    style="display: inline-block; padding: 5px 15px; background: rgba(0,0,0,0.8); color: #fff; border-radius: 20px; font-size: 0.8rem; pointer-events: auto; cursor: help;"><i
+                        class="fas fa-mouse"></i> Drag background to view office</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="footer-3d.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
